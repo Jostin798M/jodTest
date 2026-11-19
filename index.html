@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven | Find Your Dream Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">HAVEN.</div>
+
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#properties">Properties</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="contact-btn">Get in touch</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find a place you'll call home.</h1>
+            <p>
+                Discover beautiful homes, apartments and properties
+                designed for your lifestyle.
+            </p>
+
+            <div class="search-box">
+                <select id="location">
+                    <option value="">Location</option>
+                    <option>Paris</option>
+                    <option>London</option>
+                    <option>New York</option>
+                    <option>Dubai</option>
+                </select>
+
+                <select id="type">
+                    <option value="">Property type</option>
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Villa</option>
+                </select>
+
+                <select id="budget">
+                    <option value="">Budget</option>
+                    <option>Under $200,000</option>
+                    <option>$200,000 - $500,000</option>
+                    <option>Above $500,000</option>
+                </select>
+
+                <button onclick="searchProperties()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="properties">
+        <div class="section-title">
+            <h2>Featured Properties</h2>
+            <a href="#properties">Explore all →</a>
+        </div>
+
+        <div class="properties">
+
+            <div class="property-card">
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+                    alt="Modern luxury house">
+
+                <div class="property-info">
+                    <h3>Modern Luxury Villa</h3>
+                    <p>Los Angeles, California</p>
+                    <div class="price">$850,000</div>
+
+                    <div class="features">
+                        <span>4 Beds</span>
+                        <span>3 Baths</span>
+                        <span>280 m²</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img
+                    src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80"
+                    alt="Luxury apartment">
+
+                <div class="property-info">
+                    <h3>Elegant City Apartment</h3>
+                    <p>Paris, France</p>
+                    <div class="price">$520,000</div>
+
+                    <div class="features">
+                        <span>3 Beds</span>
+                        <span>2 Baths</span>
+                        <span>150 m²</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img
+                    src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80"
+                    alt="Contemporary family house">
+
+                <div class="property-info">
+                    <h3>Contemporary Family Home</h3>
+                    <p>Dubai, UAE</p>
+                    <div class="price">$1,200,000</div>
+
+                    <div class="features">
+                        <span>5 Beds</span>
+                        <span>4 Baths</span>
+                        <span>320 m²</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="about">
+            <div class="about-content">
+                <h2>More than a property. A lifestyle.</h2>
+
+                <p>
+                    At Haven, we help you find properties that match
+                    your dreams, lifestyle and investment goals.
+                    Our team makes the journey of buying or selling
+                    a property simple, transparent and enjoyable.
+                </p>
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
+                alt="Beautiful home interior">
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Haven Real Estate</h2>
+        <p>Find your dream property today.</p>
+        <p>Email: hello@havenrealestate.com</p>
+        <p>© 2026 Haven Real Estate</p>
+    </footer>
+
+    <script>
+        function searchProperties() {
+            const location = document.getElementById('location').value;
+            const type = document.getElementById('type').value;
+            const budget = document.getElementById('budget').value;
+
+            alert(
+                'Search criteria:\n' +
+                'Location: ' + (location || 'Any') + '\n' +
+                'Property: ' + (type || 'Any') + '\n' +
+                'Budget: ' + (budget || 'Any')
+            );
+        }
+    </script>
+
+</body>
+</html>
